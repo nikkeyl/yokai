@@ -1,11 +1,10 @@
-# Bun
-bun.lockb
-
 # Directories
 .husky
+public
 
 # Files
 *.md
+bun.lockb
 
 # *rc
 .ecrc
@@ -17,4 +16,3 @@ bun.lockb
 # Ignores
 .gitignore
 .prettierignore
-.remarkignore

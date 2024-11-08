@@ -1,0 +1,48 @@
+@use "@styles/abstracts" as *;
+
+* {
+  outline: none;
+
+  margin: 0;
+
+  border: 0;
+
+  box-sizing: border-box;
+
+  padding: 0;
+
+  user-select: none;
+}
+
+html,
+body {
+  min-block-size: 100svb;
+
+  overflow: hidden;
+
+  overscroll-behavior: none;
+
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body {
+  display: grid;
+
+  padding: to-rem(10) to-rem(10) to-rem(15);
+
+  grid-template-rows: 1fr auto;
+  gap: to-rem(15);
+
+  background-color: var(--color-primary-dark, $color-primary-dark);
+}
+
+img {
+  object-fit: cover;
+}
+
+button,
+input {
+  appearance: none;
+  display: block;
+}

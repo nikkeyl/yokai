@@ -1,18 +1,61 @@
 {
   "compilerOptions": {
+    // Editor Support
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    // Emit
+    "noEmit": true,
+    // Completeness
+    "skipLibCheck": true,
+    // JavaScript Support
+    "allowJs": true,
+    // Language and Environment
+    "jsx": "preserve",
+    "lib": ["DOM.Iterable", "DOM", "ESNext"],
+    // Modules
+    "allowImportingTsExtensions": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      // Data
+      "@data": ["./src/shared/data/index.ts"],
+      // Helpers
+      "@helpers": ["./src/shared/helpers/index.ts"],
+      // Images
+      "@images/*": ["./public/images/*"],
+      // Providers
+      "@providers": ["./src/app/providers/index.ts"],
+      // Socials
+      "@socials/*": ["./public/socials/*"],
+      // Styles
+      "@styles/*": ["./src/app/styles/*"],
+      // UI
+      "@ui": ["./src/shared/ui/index.ts"],
+      // Widgets
+      "@widgets": ["./src/widgets/index.ts"]
+    },
+    "resolveJsonModule": true,
+    // Projects
+    "disableReferencedProjectLoad": true,
+    "incremental": true,
     // Type Checking
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
+    "noImplicitOverride": true,
     "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true
+    "strict": true,
+    // Interop Constraints
+    "esModuleInterop": true,
+    "isolatedModules": true
   },
-  "exclude": ["specs"],
-  "extends": ["./tsconfig.node.json"],
-  "include": ["src"]
+  "exclude": ["node_modules"],
+  "include": ["**/*.tsx", "**/*.ts", ".next/types/**/*.ts", "next-env.d.ts"]
 }
